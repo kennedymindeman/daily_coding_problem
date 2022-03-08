@@ -1,5 +1,5 @@
-from solution1 import two_nums_in_list_sum_to_k as func1
-from solution1 import two_nums_in_list_sum_to_k as func2
+from src.solution1 import two_nums_in_list_sum_to_k as func1
+from src.solution1 import two_nums_in_list_sum_to_k as func2
 
 funcs = [func1, func2]
 
@@ -10,7 +10,7 @@ def test_given_example():
     """
     for func in funcs:
         result = func([10, 15, 3, 7], 17)
-        assert (result is True)
+        assert result is True
 
 
 def test_empty_list():
@@ -19,7 +19,7 @@ def test_empty_list():
     """
     for func in funcs:
         result = func([], 0)
-        assert (result is False)
+        assert result is False
 
 
 def test_size_1_list():
@@ -28,7 +28,7 @@ def test_size_1_list():
     """
     for func in funcs:
         result = func([0], 0)
-        assert (result is False)
+        assert result is False
 
 
 def test_sum_to_zero():
@@ -37,7 +37,7 @@ def test_sum_to_zero():
     """
     for func in funcs:
         result = func([0, 0], 0)
-        assert (result is True)
+        assert result is True
 
 
 def test_sum_not_in_list():
@@ -46,7 +46,7 @@ def test_sum_not_in_list():
     """
     for func in funcs:
         result = func([0, 1, 2, 3], 6)
-        assert (result is False)
+        assert result is False
 
 
 def test_all_pairs_sum_to_k():
@@ -55,7 +55,7 @@ def test_all_pairs_sum_to_k():
     """
     for func in funcs:
         result = func([1, 1, 1], 2)
-        assert (result is True)
+        assert result is True
 
 
 def test_if_k_is_double_the_center_number():
@@ -64,7 +64,7 @@ def test_if_k_is_double_the_center_number():
     """
     for func in funcs:
         result = func([2, 1, 2], 2)
-        assert (result is False)
+        assert result is False
 
 
 def test_negative_sum():
@@ -73,4 +73,4 @@ def test_negative_sum():
     """
     for func in funcs:
         result = func([-1, 0, -2], -3)
-        assert (result is True)
+        assert result is True
